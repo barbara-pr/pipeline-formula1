@@ -76,18 +76,12 @@ Os dados transformados serão armazenados em um banco **PostgreSQL**.
 * Docker
 * Git / GitHub
 
-### Orquestração
-
-Após a construção do pipeline ETL, será estudada a utilização de uma ferramenta de orquestração, como **Apache Airflow**, para automatizar e controlar a execução das etapas.
-
 ## 📈 Análises planejadas
 
 * Relação entre posição de largada e posição final;
 * Ganho e perda de posições durante as corridas;
 * Influência da posição de largada no resultado final;
-* Comparação entre circuitos;
 * Análise do GP de Mônaco de 2015;
-* Estudo do caso de Max Verstappen em Mônaco.
 
 ## 📁 Estrutura do projeto
 
@@ -106,11 +100,9 @@ formula-1-data-pipeline/
 │   └── exploratory_analysis.ipynb
 │
 ├── main.py
-├── requirements.txt
+├── docker-compose.yml
 └── README.md
 ```
-
-> A estrutura será atualizada conforme o desenvolvimento do projeto.
 
 ## 📚 Objetivo de aprendizado
 
@@ -123,7 +115,6 @@ Este projeto está sendo desenvolvido como uma prática pessoal de **Data Engine
 * PostgreSQL;
 * Docker e containers;
 * organização de projetos de dados;
-* orquestração de pipelines.
 
 ---
 

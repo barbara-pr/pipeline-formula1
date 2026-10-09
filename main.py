@@ -1,12 +1,12 @@
 from src.extract import extract
 from src.transform import transform_data
-
+from src.load import load_data
 
 def pipeline():
     print("=== INICIANDO PIPELINE ===")
 
     # 1. EXTRACT
-    print("\n[1/2] Extraindo dados...")
+    print("\n[1/3] Extraindo dados...")
 
     qualifying, results, races, drivers, constructors = extract()
 
@@ -18,7 +18,7 @@ def pipeline():
     print(f"Constructors: {len(constructors)} registros")
 
     # 2. TRANSFORM
-    print("\n[2/2] Transformando dados...")
+    print("\n[2/3] Transformando dados...")
 
     dados = transform_data(
         qualifying,
@@ -34,6 +34,13 @@ def pipeline():
     dados.to_csv("data/dados_transformados.csv", index=False)
 
     print("Dados transformados salvos!")
+
+    # 3. LOAD
+    print("\n[3/3] Carregando dados no PostgreSQL...")
+
+    load_data(dados)
+
+    print("\n--- PIPELINE CONCLUÍDO ---")
 
     return dados
 

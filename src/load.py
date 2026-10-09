@@ -6,7 +6,7 @@ def load_data(dados):
 
     # 1. CRIAR CONEXÃO COM O POSTGRESQL
     engine = create_engine(
-        "postgresql://postgres:postgres@localhost:5432/f1"
+        "postgresql+psycopg://f1_user:f1_dev_password@localhost:5433/f1"
     )
 
     # 2. ENVIAR OS DADOS PARA O BANCO
